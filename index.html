@@ -1,15 +1,177 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>TES – Technologie des Équipements et Supports</title>
+    <style>
+        :root {
+            --bg: #f4f6f9;
+            --card: #ffffff;
+            --text: #1d2733;
+            --muted: #5b6878;
+            --accent: #0f6cbd;
+            --accent-soft: #e3effa;
+            --border: #dde3ea;
+        }
+        @media (prefers-color-scheme: dark) {
+            :root {
+                --bg: #0e141c;
+                --card: #18212c;
+                --text: #e5e9ef;
+                --muted: #9aa6b4;
+                --accent: #5aa9f0;
+                --accent-soft: #1c2f44;
+                --border: #2a3644;
+            }
+        }
+        * { box-sizing: border-box; }
+        html { scroll-behavior: smooth; }
+        body {
+            margin: 0;
+            background: var(--bg);
+            color: var(--text);
+            font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+            line-height: 1.6;
+        }
+        header {
+            background: var(--accent);
+            color: #fff;
+            padding: 40px 16px 32px;
+            text-align: center;
+        }
+        header h1 { margin: 0; font-size: 2.4rem; letter-spacing: 2px; }
+        header p { margin: 4px 0 0; font-size: 1.05rem; opacity: 0.9; }
+        nav {
+            position: sticky;
+            top: 0;
+            background: var(--card);
+            border-bottom: 1px solid var(--border);
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 4px 16px;
+            padding: 10px 16px;
+            z-index: 1;
+        }
+        nav a { color: var(--accent); text-decoration: none; font-weight: 600; font-size: 0.95rem; }
+        main { max-width: 900px; margin: 0 auto; padding: 24px 16px 48px; }
+        section { margin-bottom: 40px; }
+        h2 { border-left: 4px solid var(--accent); padding-left: 10px; font-size: 1.4rem; }
+        .grille {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+            gap: 16px;
+        }
+        .carte {
+            background: var(--card);
+            border: 1px solid var(--border);
+            border-radius: 12px;
+            padding: 18px;
+        }
+        .carte h3 { margin: 0 0 6px; font-size: 1.1rem; }
+        .carte .icone { font-size: 1.8rem; }
+        .carte p, .carte li { color: var(--muted); }
+        .carte ul { padding-left: 18px; margin: 0; }
+        .astuce {
+            background: var(--accent-soft);
+            border-radius: 12px;
+            padding: 16px 18px;
+        }
+        footer { text-align: center; color: var(--muted); font-size: 0.85rem; padding: 24px 16px; }
+    </style>
 </head>
 <body>
-    <ul>
-    <li>hello</li>
-    <li>world</li>
-    </ul>
+    <header>
+        <h1>TES</h1>
+        <p>Technologie des Équipements et Supports</p>
+    </header>
+
+    <nav>
+        <a href="#presentation">Présentation</a>
+        <a href="#equipements">Équipements</a>
+        <a href="#supports">Supports</a>
+        <a href="#securite">Sécurité</a>
+        <a href="#revisions">Révisions</a>
+    </nav>
+
+    <main>
+        <section id="presentation">
+            <h2>📘 Présentation</h2>
+            <div class="carte">
+                <p>Bienvenue sur ce site consacré à la <strong>Technologie des Équipements et Supports (TES)</strong>.
+                On y étudie les équipements utilisés dans le métier, les supports sur lesquels on travaille,
+                et les bonnes pratiques pour les utiliser en toute sécurité.</p>
+                <p>Ce site rassemble des fiches simples pour comprendre, réviser et retrouver l'essentiel rapidement.</p>
+            </div>
+        </section>
+
+        <section id="equipements">
+            <h2>🛠️ Les équipements</h2>
+            <div class="grille">
+                <div class="carte">
+                    <div class="icone">⚙️</div>
+                    <h3>Identifier</h3>
+                    <p>Connaître le nom, le rôle et les principaux éléments de chaque équipement.</p>
+                </div>
+                <div class="carte">
+                    <div class="icone">🔌</div>
+                    <h3>Utiliser</h3>
+                    <p>Savoir mettre en marche, régler et arrêter un équipement correctement.</p>
+                </div>
+                <div class="carte">
+                    <div class="icone">🧰</div>
+                    <h3>Entretenir</h3>
+                    <p>Nettoyer, vérifier et signaler une anomalie pour garder l'équipement en bon état.</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="supports">
+            <h2>🧱 Les supports</h2>
+            <div class="grille">
+                <div class="carte">
+                    <div class="icone">🔍</div>
+                    <h3>Reconnaître</h3>
+                    <p>Identifier la nature d'un support et ses caractéristiques.</p>
+                </div>
+                <div class="carte">
+                    <div class="icone">🧪</div>
+                    <h3>Préparer</h3>
+                    <p>Choisir les bons produits et la bonne méthode selon le support.</p>
+                </div>
+                <div class="carte">
+                    <div class="icone">✅</div>
+                    <h3>Contrôler</h3>
+                    <p>Vérifier le résultat et l'état du support après l'intervention.</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="securite">
+            <h2>🦺 Sécurité</h2>
+            <div class="carte">
+                <ul>
+                    <li>Lire la notice et respecter les consignes du fabricant.</li>
+                    <li>Porter les équipements de protection individuelle (EPI) adaptés.</li>
+                    <li>Vérifier l'état de l'équipement avant chaque utilisation.</li>
+                    <li>Débrancher avant tout nettoyage ou entretien.</li>
+                    <li>Ranger le matériel et laisser le poste de travail propre.</li>
+                </ul>
+            </div>
+        </section>
+
+        <section id="revisions">
+            <h2>📝 Révisions</h2>
+            <div class="astuce">
+                <p><strong>Méthode :</strong> pour chaque équipement ou support, retiens
+                <em>son nom</em>, <em>son rôle</em>, <em>comment l'utiliser</em> et
+                <em>les règles de sécurité</em>.</p>
+                <p>Des fiches de révision détaillées seront ajoutées ici.</p>
+            </div>
+        </section>
+    </main>
+
+    <footer>Site TES – publié avec GitHub Pages</footer>
 </body>
 </html>
